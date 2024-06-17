@@ -5,7 +5,7 @@ import plotly.figure_factory as ff
 import pandas as pd
 import assets.components as cp
 parks_folder = "national_park_animal"
-df = pd.read_csv(f'{parks_folder}\\All_5parks.csv')
+df = pd.read_csv(f'{parks_folder}\All_5parks.csv')
 df.date = pd.to_datetime(df['date'], format='%Y%m%d')
 parks_name = ["墾丁", "雪霸", "太魯閣", "陽明山", "玉山"]
 weathers = {'PS01':'測站氣壓', 'TX01':'氣溫', 'RH01':'相對溼度', 'WD01':'風速', 'WD02':'風向', 'WD07':'最大瞬間風速', 'WD08':'最大瞬間風向', 'PP01':'降水量'}
