@@ -1,17 +1,12 @@
 dash
 dash_bootstrap_components
 plotly
-plotly.express
-plotly.graph_objects
 pandas
 numpy
 json
 sklearn
-sklearn.cluster
-sklearn.model_selection
 joblib
 scipy.stats
 bs4
 requests
 gunicorn
-
