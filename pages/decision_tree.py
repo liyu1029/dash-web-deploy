@@ -12,7 +12,7 @@ np.set_printoptions(suppress=True)
 
 # import dataframe
 parks_folder = "national_park_animal"
-df = pd.read_csv(f'{parks_folder}\\All_5parks.csv')
+df = pd.read_csv(f'{parks_folder}\All_5parks.csv')
 df['TX01'] = pd.to_numeric(df['TX01'], errors='coerce')
 df['WD01'] = pd.to_numeric(df['WD01'], errors='coerce')
 df['WD02'] = pd.to_numeric(df['WD02'], errors='coerce')
@@ -20,8 +20,8 @@ df['PP01'] = pd.to_numeric(df['PP01'], errors='coerce')
 df = df.dropna(subset=['TX01','WD01','WD02','PP01'])
 X_train = df[['TX01','WD01','WD02','PP01']].values
 #導入訓練好的模型
-clf_dt = joblib.load(f'{parks_folder}\\clf_park.pkl')
-clf_rf = joblib.load(f'{parks_folder}\\clf_spices.pkl')
+clf_dt = joblib.load(f'{parks_folder}\clf_park.pkl')
+clf_rf = joblib.load(f'{parks_folder}\clf_spices.pkl')
 
 
 dash.register_page(__name__)
