@@ -1,6 +1,7 @@
 dash
 dash_bootstrap_components
-plotly.io==5.22.0
+plotly
+plotly.io
 plotly.express
 plotly.graph_objects
 pandas
