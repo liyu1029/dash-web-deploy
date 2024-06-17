@@ -16,7 +16,7 @@ models = {'Regression': linear_model.LinearRegression,
 
 # import dataframe
 parks_folder = "national_park_animal"
-df = pd.read_csv(f'{parks_folder}\\All_5parks.csv')
+df = pd.read_csv(f'{parks_folder}\All_5parks.csv')
 df.date = pd.to_datetime(df['date'], format='%Y%m%d')
 df_year_month_amount=df.groupby([df.date.dt.year.rename('year'),df.date.dt.month.rename('month'),df.park]).agg({'amount':'size'}).reset_index()
 df_monthly_count=df.groupby([df.date.dt.strftime("%Y%m"),df.park]).agg({'amount':'size'}).reset_index()
