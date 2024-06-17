@@ -7,7 +7,7 @@ import numpy as np
 import assets.components as cp
 
 parks_folder = "national_park_animal"
-df = pd.read_csv(f'{parks_folder}\\Caste.csv')
+df = pd.read_csv(f'{parks_folder}\Caste.csv')
 df.rename(columns={'under_trial': 'under trial', 'state_name': 'state'}, inplace=True)
 
 dash.register_page(__name__)
