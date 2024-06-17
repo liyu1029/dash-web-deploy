@@ -5,8 +5,8 @@ import pandas as pd
 import numpy as np
 import assets.components as cp
 parks_folder = "national_park_animal"
-df = pd.read_csv(f'{parks_folder}\\All_5parks.csv')
-similarities_df = pd.read_csv(f'{parks_folder}\\jaccard_similarity.csv', index_col=0)
+df = pd.read_csv(f'{parks_folder}\All_5parks.csv')
+similarities_df = pd.read_csv(f'{parks_folder}\jaccard_similarity.csv', index_col=0)
 all_species = df.TaiCoL.unique()
 all_species_name = df[['TaiCoL', '中文俗名']].drop_duplicates().set_index('TaiCoL').T.to_dict('list')
 parks_name = ["墾丁", "雪霸", "太魯閣", "陽明山", "玉山"]
