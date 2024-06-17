@@ -5,7 +5,12 @@ import pandas as pd
 import numpy as np
 import assets.components as cp
 parks_folder = "national_park_animal"
-df = pd.read_csv(f'{parks_folder}/All_5parks.csv')
+df = pd.read_csv('C:\\Users\\user\\myproject\\national_park_animal\\All_5parks.csv')
+weathers = ['PS01', 'TX01', 'RH01', 'WD01', 'WD02', 'WD07', 'WD08', 'PP01']
+for weather in weathers:
+    df[weather] = pd.to_numeric(df[weather], errors='coerce')
+df = df.dropna(subset=weathers)
+
 similarities_df = pd.read_csv(f'{parks_folder}/jaccard_similarity.csv', index_col=0)
 all_species = df.TaiCoL.unique()
 all_species_name = df[['TaiCoL', '中文俗名']].drop_duplicates().set_index('TaiCoL').T.to_dict('list')
