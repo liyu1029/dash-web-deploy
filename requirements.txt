@@ -5,7 +5,7 @@ pandas
 numpy
 scikit-learn
 joblib
-scipy.stats
+scipy
 bs4
 requests
 gunicorn
