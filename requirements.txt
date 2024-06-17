@@ -1,8 +1,8 @@
 dash
 dash_bootstrap_components
 plotly
-plotly.io
 plotly.express
+plotly.io
 plotly.graph_objects
 pandas
 numpy
