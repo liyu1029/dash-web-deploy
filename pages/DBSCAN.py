@@ -72,7 +72,7 @@ layout = html.Div([
         ], style={'width': "52%"}),
 
         html.Div(children=[
-            html.Div(html.Img(style={'height':'100%', 'width':'100%'}, id="DBSCAN-pic")),
+            html.Div(html.Img(src="assets/pic/click_pic.jpg", style={'height':'100%', 'width':'100%'}, id="DBSCAN-pic")),
             dcc.Markdown("""
                 **Click Data**
 
