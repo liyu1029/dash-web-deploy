@@ -4,8 +4,8 @@ import dash_bootstrap_components as dbc
 import assets.plot_templates as plot_templates
 
 # app = Dash(__name__, use_pages=True, external_stylesheets=[dbc.themes.BOOTSTRAP])
-# app = Dash(__name__, use_pages=True)
-app = Dash(__name__, use_pages=True, pages_folder="pages00")
+app = Dash(__name__, use_pages=True)
+# app = Dash(__name__, use_pages=True, pages_folder="pages1")
 server = app.server
 
 navbar = dbc.NavbarSimple(
