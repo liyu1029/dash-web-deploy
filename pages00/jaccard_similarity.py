@@ -1,11 +1,11 @@
 import dash
-from dash import html, dcc, callback, Output, Input, State, ctx
+from dash import html, dcc, callback, Output, Input, State
 import plotly.express as px
 import pandas as pd
 import numpy as np
 import assets.components as cp
 parks_folder = "national_park_animal"
-df = pd.read_csv('C:\\Users\\user\\myproject\\national_park_animal\\All_5parks.csv')
+df = pd.read_csv(f'{parks_folder}/All_5parks.csv')
 weathers = ['PS01', 'TX01', 'RH01', 'WD01', 'WD02', 'WD07', 'WD08', 'PP01']
 for weather in weathers:
     df[weather] = pd.to_numeric(df[weather], errors='coerce')
