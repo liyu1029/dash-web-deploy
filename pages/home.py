@@ -5,7 +5,7 @@ import dash_bootstrap_components as dbc
 dash.register_page(__name__, path='/')
 teammate_card = dbc.Card(
     [
-        dbc.CardImg(src="assets\\pic\\bird.jpg", top=True),
+        dbc.CardImg(src="assets\pic\bird.jpg", top=True),
         dbc.CardBody(
             [
                 html.H3('組員'),
@@ -23,7 +23,7 @@ teammate_card = dbc.Card(
 )
 source_card = dbc.Card(
     [
-        dbc.CardImg(src="assets\\pic\\bird.jpg", top=True),
+        dbc.CardImg(src="assets\pic\bird.jpg", top=True),
         dbc.CardBody([
                 html.H3('資料來源'),
                 html.Label('主要資料：'),
@@ -43,7 +43,7 @@ source_card = dbc.Card(
 )
 page_card = dbc.Card(
     [
-        dbc.CardImg(src="assets\\pic\\bird.jpg", top=True),
+        dbc.CardImg(src="assets\pic\bird.jpg", top=True),
         dbc.CardBody([
             dbc.ListGroup([
                 dbc.ListGroupItem(f" {page['name']}", href=page["relative_path"])
