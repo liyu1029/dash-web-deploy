@@ -1,0 +1,41 @@
+.btn2,
+.btn2:focus {
+    position: relative;
+    min-width: 20px;
+    background-color: black;
+    border-radius: 4em;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition-duration: 0.4s;
+    padding: 10px 20px;
+}
+.btn2:hover {
+    background-color: #3A3A3A;
+    color: white;
+    transition-duration: 0.1s;
+}
+.btn2:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    box-shadow: 0 0 10px 40px var(--info);
+    border-radius: 4em;
+}
+.btn2:active:after {
+    opacity: 1;
+    transition: 0s;
+    box-shadow: 0 0 0 0 var(--info);
+}
+.btn2:active {
+    top: 1px;
+}

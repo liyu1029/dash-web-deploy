@@ -1,0 +1,27 @@
+.btn4,
+.btn4:focus {
+    position: relative;
+    min-width: 20px;
+    border: none;
+    border-radius: 2px;
+    background-position: center;
+    background-color: #2196f3;
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background 0.8s;
+    padding: 10px 20px;
+    box-shadow: 0 0 4px #999;
+}
+.btn4:hover {
+    color: #FFFFFF;
+    background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+}
+.btn4:active {
+    background-color: #6eb9f7;
+    background-size: 100%;
+    transition: background 0s;
+}

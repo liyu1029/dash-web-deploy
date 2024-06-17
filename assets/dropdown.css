@@ -1,0 +1,85 @@
+/* Dropdowns */
+
+:root {
+    --下拉背景: var(--bg_color);
+    --下拉hover: var(--primary);
+    --border: var(--gray);
+    --text: var(--gray-dark);
+    --下拉箭頭: var(--info);
+    --選到的框框: var(--secondary);
+ }
+
+.customDropdown .Select-control {
+    width: 100%;
+    height: 38px;
+    background-color: transparent;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    color: var(--text) !important;
+}
+
+.customDropdown .Select-value-label,
+.customDropdown .Select-placeholder {    
+    color: var(--text) !important;
+}
+
+.customDropdown.Select--multi .Select-value{
+    background-color: color-mix(in srgb, var(--選到的框框) 60%, rgba(255, 255, 255, 0));
+    border: 1px solid color-mix(in srgb, var(--選到的框框) 100%, rgba(255, 255, 255, 0));
+    color: var(--text);
+}
+
+.customDropdown.Select--multi .Select-value-icon{
+    border-right: 1px solid color-mix(in srgb, var(--選到的框框) 100%, rgba(255, 255, 255, 0));
+}
+
+.customDropdown.Select--multi .Select-value-icon:focus, .customDropdown.Select--multi .Select-value-icon:hover{
+    background-color: color-mix(in srgb, var(--選到的框框) 45%, rgba(255, 255, 255, 0));
+    color: var(--text);
+
+}
+
+.customDropdown.Select--multi .Select-value-icon:active {
+    background-color: color-mix(in srgb, var(--選到的框框) 68%, rgba(255, 255, 255, 0));
+}
+
+.customDropdown .Select-arrow {
+    border-color: var(--下拉箭頭) transparent transparent;
+}
+
+.customDropdown.is-open>.Select-control .Select-arrow {
+    border-color: transparent transparent var(--下拉箭頭);
+}
+
+.customDropdown.is-open > .Select-control,
+.customDropdown.is-focused > .Select-control,
+.customDropdown.Select.is-focused:not(.is-open) > .Select-control{
+    background-color: transparent;
+}
+
+.customDropdown .Select-clear {
+    color: var(--text);
+    font-size: 22px;
+}
+
+.customDropdown.is-focused:not(.is-open) > .Select-control {
+    border: 2px solid color-mix(in srgb, var(--text), var(--下拉背景) 50%) !important;
+}
+
+.customDropdown.is-focused:not(.is-open) .Select-arrow {
+    border-color: var(--text) transparent transparent;
+}
+
+.customDropdown .Select-menu-outer {
+    margin-top: 5px;
+    border-radius: 3px;
+    background-color: var(--下拉背景);
+    border: 1px solid var(--border);
+    color: var(--下拉hover);
+}
+
+.customDropdown .VirtualizedSelectFocusedOption {
+    background-color: color-mix(in srgb, var(--下拉hover), var(--下拉背景) 7%);
+    border-radius: 3px;
+    color: var(--下拉背景);
+}

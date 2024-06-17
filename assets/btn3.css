@@ -1,0 +1,99 @@
+.btn3,
+.btn3:focus {
+    position: relative;
+    min-width: 20px;
+    border: 0;
+    border-radius: 0.4rem;
+    background: #FFEB3B;
+    color: #004D40;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    box-shadow: -1px 1px 8px rgba(0, 0, 0, 0.4);
+    transition: background 250ms, box-shadow 250ms;
+    padding: 8px 16px;
+}
+.btn3:hover {
+    color: #004D40;
+    background: #FDD835;
+    box-shadow: -2px 2px 16px rgba(0, 0, 0, 0.6);
+}
+.btn3:active {
+    box-shadow: -4px 4px 24px rgba(0, 0, 0, 0.8);
+}
+.btn3 .text {
+    position: relative;
+    z-index: 2;
+}
+.btn3 .dot {
+    position: absolute;
+    z-index: 0;
+    display: block;
+    width: 200px;
+    height: 10px;
+    transform-origin: 5px 5px;
+    pointer-events: none;
+}
+.btn3 .dot:nth-child(1) {
+    top: 50%;
+    left: 100%;
+    transform: translate3d(-10px, -5px, 0);
+}
+.btn3 .dot:nth-child(2) {
+    bottom: 0;
+    left: 100%;
+    transform: translate3d(-10px, 0, 0) rotate(45deg);
+}
+.btn3 .dot:nth-child(3) {
+    bottom: 0;
+    left: 50%;
+    transform: translate3d(-5px, 0, 0) rotate(90deg);
+}
+.btn3 .dot:nth-child(4) {
+    bottom: 0;
+    left: 0;
+    transform: rotate(135deg);
+}
+.btn3 .dot:nth-child(5) {
+    top: 50%;
+    left: 0;
+    transform: translate3d(0, -5px, 0) rotate(180deg);
+}
+.btn3 .dot:nth-child(6) {
+    top: 0;
+    left: 0;
+    transform: rotate(225deg);
+}
+.btn3 .dot:nth-child(7) {
+    top: 0;
+    left: 50%;
+    transform: translate3d(-5px, 0, 0) rotate(270deg);
+}
+.btn3 .dot:nth-child(8) {
+    top: 0;
+    left: 100%;
+    transform: translate3d(-10px, 0, 0) rotate(315deg);
+}
+.btn3 .dot:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 6px;
+    height: 6px;
+    background-color: #FDD835;
+    border-radius: 50%;
+    offset-path: path("M0 1c7.1 0 10.7 2 14.3 4s7.1 4 14.3 4 10.7-2 14.3-4 7.2-4 14.3-4 10.7 2 14.3 4 7.1 4 14.3 4 10.7-2 14.3-4 7.1-4 14.3-4 10.7 2 14.3 4 7.1 4 14.3 4 10.7-2 14.3-4 7.1-4 14.3-4 10.7 2 14.3 4 7.1 4 14.3 4");
+    offset-distance: 100%;
+    pointer-events: none;
+    opacity: 0;
+    transition: background 250ms, offset-distance 750ms, opacity 750ms;
+}
+.btn3:active .dot:before {
+    offset-distance: 0;
+    opacity: 1;
+    transition: offset-distance 0ms, opacity 0ms;
+}
