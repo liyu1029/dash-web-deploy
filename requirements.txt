@@ -3,7 +3,7 @@ dash_bootstrap_components
 plotly
 pandas
 numpy
-sklearn
+scikit-learn
 joblib
 scipy.stats
 bs4
