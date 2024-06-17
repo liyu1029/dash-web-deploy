@@ -1,25 +1,46 @@
-from dash import Dash, html, dcc, callback, Output, Input
-import plotly.express as px
-import pandas as pd
+import dash
+from dash import Dash, html, dcc, State, callback, Input, Output
+import dash_bootstrap_components as dbc
+import assets.plot_templates as plot_templates
 
-df = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/gapminder_unfiltered.csv')
-
-app = Dash()
+# app = Dash(__name__, use_pages=True, external_stylesheets=[dbc.themes.BOOTSTRAP])
+app = Dash(__name__, use_pages=True)
 server = app.server
 
-app.layout = [
-    html.H1(children='Title of Dash App', style={'textAlign':'center'}),
-    dcc.Dropdown(df.country.unique(), 'Canada', id='dropdown-selection'),
-    dcc.Graph(id='graph-content')
-]
-
-@callback(
-    Output('graph-content', 'figure'),
-    Input('dropdown-selection', 'value')
+navbar = dbc.NavbarSimple(
+    children=[
+            dbc.NavItem(dbc.NavLink(f" {page['name']}", href=page["relative_path"], active="exact")) for page in dash.page_registry.values()
+    ],
+    brand="國家公園生物分佈", brand_href="/",
+    color="primary", dark=True,
 )
-def update_graph(value):
-    dff = df[df.country==value]
-    return px.line(dff, x='year', y='pop')
+
+nav = dbc.Nav(
+    [
+        dbc.NavItem(dbc.NavLink(f" {page['name']}", href=page["relative_path"], active="exact")) for page in dash.page_registry.values()]+[
+        dbc.DropdownMenu(
+            [dbc.DropdownMenuItem(f" {page['name']}") for page in dash.page_registry.values()],
+            label="More pages",
+            nav=True,
+        ),
+    ],
+    horizontal="center",
+    pills=True,
+    class_name="py-4"
+)
+
+app.layout = html.Div([
+    # html.Div([
+    #     html.Div(
+    #         dbc.Button(f" {page['name']}", href=page["relative_path"], class_name='btn3')
+    #     ) for page in dash.page_registry.values()
+    # ],
+    # className="d-flex pb-4"),#space-evenly
+    navbar,
+    dash.page_container,
+    nav
+])
+
 
 if __name__ == '__main__':
     app.run(debug=True)
