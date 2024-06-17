@@ -99,7 +99,6 @@ def display_click_data(clickData):
     div = soup.find("div", {"class": "posa"})
     results = div.find_all("img")
     image_links = [result.get("src") for result in results]
-    print(image_links)
     point_info=clickData['points'][0]
     del point_info["bbox"]
     if len(image_links)==0:
