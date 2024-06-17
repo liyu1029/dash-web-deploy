@@ -104,7 +104,7 @@ def display_click_data(clickData):
     if len(image_links)==0:
         # return "", json.dumps(clickData, indent=2)
         # return "", [point_info], {'overflowY': 'scroll'}
-        return "assets\\pic\\not_found.jpg", [{"":i, "val":point_info[i]}for i in point_info.keys()], {'overflowY': 'scroll'}
+        return "assets/pic/not_found.jpg", [{"":i, "val":point_info[i]}for i in point_info.keys()], {'overflowY': 'scroll'}
     else:
         # return image_links[0], json.dumps(clickData, indent=2)
         # return image_links[0], [point_info], {'overflowY': 'scroll'}
