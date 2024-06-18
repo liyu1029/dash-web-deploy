@@ -21,7 +21,7 @@ nav = dbc.Nav(
     [
         dbc.NavItem(dbc.NavLink(f" {page['name']}", href=page["relative_path"], active="exact")) for page in pages_link]+[
         dbc.DropdownMenu(
-            [dbc.DropdownMenuItem(f" {page['name']}") pages_link],
+            [dbc.DropdownMenuItem(f" {page['name']}") for page in pages_link],
             label="More pages",
             nav=True,
         ),
