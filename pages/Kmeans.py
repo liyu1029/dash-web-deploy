@@ -76,7 +76,7 @@ layout = html.Div([
         ], style={'width': "52%"}),
 
         html.Div(children=[
-            html.Div(html.Img(style={src=click_pic, 'height':'100%', 'width':'100%'}, id="KM-pic")),
+            html.Div(html.Img(src=click_pic, style={'height':'100%', 'width':'100%'}, id="KM-pic")),
             dcc.Markdown("""
                 **Click Data**
 
