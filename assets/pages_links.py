@@ -2,7 +2,7 @@ pages_links=[
   # pages
   ['name': 'Home', 'relative_path': 'https://dash-web-deploy.onrender.com/'],
   ['name': 'Dbscan', 'relative_path': 'https://dash-web-deploy.onrender.com/dbscan'],
-  ['name': 'Map kmeans', 'relative_path': 'https://dash-web-deploy.onrender.com/dbscan'],
+  ['name': 'Map kmeans', 'relative_path': 'https://dash-web-deploy.onrender.com/kmeans'],
 
   # pages1
   ['name': 'Decision tree', 'relative_path': 'https://dash-web-deploy-1.onrender.com/decision-tree'],
