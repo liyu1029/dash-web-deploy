@@ -41,13 +41,14 @@ source_card = dbc.Card(
     ],
     style={"width": "20rem"},
 )
-page_card = dbc.Card(
+park_card = dbc.Card(
     [
         dbc.CardImg(src="assets/pic/bird.jpg", top=True),
         dbc.CardBody([
+            html.H3('資料來源'),
             dbc.ListGroup([
                 dbc.ListGroupItem(f" {page['name']}", href=page["relative_path"])
-            ]) for page in dash.page_registry.values()
+            ]) for page in ["玉山", "雪霸", "陽明山", "太魯閣", "墾丁"]
         ]),
     ],
     style={"width": "20rem"},
