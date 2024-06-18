@@ -110,7 +110,7 @@ def display_click_data(clickData):
 
     if len(image_links)==0:
         # return "", json.dumps(clickData, indent=2)
-        return "not_found, name
+        return not_found, name
     else:
         # return image_links[0], json.dumps(clickData, indent=2)
         return image_links[0], name
