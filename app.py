@@ -11,7 +11,7 @@ server = app.server
 
 navbar = dbc.NavbarSimple(
     children=[
-            dbc.NavItem(dbc.NavLink(f" {page['name']}", href=page["relative_path"], active="exact")) for page in pages_link
+            dbc.NavItem(dbc.NavLink(f" {page['name']}", href=page["relative_path"], active="exact")) for page in pages_links
     ],
     brand="國家公園生物分佈", brand_href="/",
     color="primary", dark=True,
@@ -19,9 +19,9 @@ navbar = dbc.NavbarSimple(
 
 nav = dbc.Nav(
     [
-        dbc.NavItem(dbc.NavLink(f" {page['name']}", href=page["relative_path"], active="exact")) for page in pages_link]+[
+        dbc.NavItem(dbc.NavLink(f" {page['name']}", href=page["relative_path"], active="exact")) for page in pages_links]+[
         dbc.DropdownMenu(
-            [dbc.DropdownMenuItem(f" {page['name']}") for page in pages_link],
+            [dbc.DropdownMenuItem(f" {page['name']}") for page in pages_links],
             label="More pages",
             nav=True,
         ),
