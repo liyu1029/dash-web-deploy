@@ -47,8 +47,8 @@ park_card = dbc.Card(
         dbc.CardBody([
             html.H3('資料來源'),
             dbc.ListGroup([
-                dbc.ListGroupItem(f" {page['name']}", href=page["relative_path"])
-            ]) for page in ["玉山", "雪霸", "陽明山", "太魯閣", "墾丁"]
+                dbc.ListGroupItem(f" {park}")
+            ]) for park in ["玉山", "雪霸", "陽明山", "太魯閣", "墾丁"]
         ]),
     ],
     style={"width": "20rem"},
