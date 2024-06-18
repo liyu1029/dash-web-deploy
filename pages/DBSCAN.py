@@ -15,6 +15,8 @@ from assets.plot_templates import map_layout
 parks_folder = "national_park_animal"
 df = pd.read_csv(f'{parks_folder}/All_5parks.csv')
 df.date = pd.to_datetime(df['date'], format='%Y%m%d')
+click_pic="https://github.com/liyu1029/dash-web-deploy/blob/6966c2257db2fa6b0626dc0028b5ed7006d1e58c/assets/pic/click_pic.png"
+not_found="https://github.com/liyu1029/dash-web-deploy/blob/6966c2257db2fa6b0626dc0028b5ed7006d1e58c/assets/pic/not_found.png"
 parks_name = ["墾丁", "雪霸", "太魯閣", "陽明山", "玉山"]
 weathers = ['PS01', 'TX01', 'RH01', 'WD01', 'WD02', 'WD07', 'WD08', 'PP01']
 map_styles = ['open-street-map', 'white-bg', 'carto-positron', 'carto-darkmatter']
@@ -72,7 +74,7 @@ layout = html.Div([
         ], style={'width': "52%"}),
 
         html.Div(children=[
-            html.Div(html.Img(src="assets/pic/click_pic.png", style={'height':'100%', 'width':'100%'}, id="DBSCAN-pic")),
+            html.Div(html.Img(src=click_pic, style={'height':'100%', 'width':'100%'}, id="DBSCAN-pic")),
             dcc.Markdown("""
                 **Click Data**
 
@@ -104,7 +106,7 @@ def display_click_data(clickData):
     if len(image_links)==0:
         # return "", json.dumps(clickData, indent=2)
         # return "", [point_info], {'overflowY': 'scroll'}
-        return "assets/pic/not_found.png", [{"":i, "val":point_info[i]}for i in point_info.keys()], {'overflowY': 'scroll'}
+        return not_found, [{"":i, "val":point_info[i]}for i in point_info.keys()], {'overflowY': 'scroll'}
     else:
         # return image_links[0], json.dumps(clickData, indent=2)
         # return image_links[0], [point_info], {'overflowY': 'scroll'}
