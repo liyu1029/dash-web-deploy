@@ -58,7 +58,7 @@ layout = html.Div([
     dbc.Row([
         teammate_card,
         source_card,
-        page_card
+        park_card
     ], justify="around")
 ])
 
