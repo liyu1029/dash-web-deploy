@@ -2,7 +2,7 @@ import dash
 from dash import Dash, html, dcc, State, callback, Input, Output
 import dash_bootstrap_components as dbc
 import assets.plot_templates as plot_templates
-from assets.pages_link import pages_link
+from assets.pages_links import pages_links
 
 # app = Dash(__name__, use_pages=True, external_stylesheets=[dbc.themes.BOOTSTRAP])
 app = Dash(__name__, use_pages=True)
