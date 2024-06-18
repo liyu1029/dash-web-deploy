@@ -5,8 +5,8 @@ import assets.plot_templates as plot_templates
 from assets.pages_links import pages_links
 
 # app = Dash(__name__, use_pages=True, external_stylesheets=[dbc.themes.BOOTSTRAP])
-app = Dash(__name__, use_pages=True)
-# app = Dash(__name__, use_pages=True, pages_folder="pages2")
+# app = Dash(__name__, use_pages=True)
+app = Dash(__name__, use_pages=True, pages_folder="pages2")
 server = app.server
 
 navbar = dbc.NavbarSimple(
