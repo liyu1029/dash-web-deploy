@@ -15,7 +15,7 @@ from assets.plot_templates import map_layout
 parks_folder = "national_park_animal"
 df = pd.read_csv(f'{parks_folder}/All_5parks.csv')
 df.date = pd.to_datetime(df['date'], format='%Y%m%d')
-click_pic=""
+click_pic="assets/pic/click_pic.png"
 not_found="assets/pic/not_found.png"
 parks_name = ["墾丁", "雪霸", "太魯閣", "陽明山", "玉山"]
 weathers = ['PS01', 'TX01', 'RH01', 'WD01', 'WD02', 'WD07', 'WD08', 'PP01']
