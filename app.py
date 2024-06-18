@@ -2,6 +2,7 @@ import dash
 from dash import Dash, html, dcc, State, callback, Input, Output
 import dash_bootstrap_components as dbc
 import assets.plot_templates as plot_templates
+from assets.pages_link import pages_link
 
 # app = Dash(__name__, use_pages=True, external_stylesheets=[dbc.themes.BOOTSTRAP])
 app = Dash(__name__, use_pages=True)
@@ -10,7 +11,7 @@ server = app.server
 
 navbar = dbc.NavbarSimple(
     children=[
-            dbc.NavItem(dbc.NavLink(f" {page['name']}", href=page["relative_path"], active="exact")) for page in dash.page_registry.values()
+            dbc.NavItem(dbc.NavLink(f" {page['name']}", href=page["relative_path"], active="exact")) for page in pages_link
     ],
     brand="國家公園生物分佈", brand_href="/",
     color="primary", dark=True,
@@ -18,9 +19,9 @@ navbar = dbc.NavbarSimple(
 
 nav = dbc.Nav(
     [
-        dbc.NavItem(dbc.NavLink(f" {page['name']}", href=page["relative_path"], active="exact")) for page in dash.page_registry.values()]+[
+        dbc.NavItem(dbc.NavLink(f" {page['name']}", href=page["relative_path"], active="exact")) for page in pages_link]+[
         dbc.DropdownMenu(
-            [dbc.DropdownMenuItem(f" {page['name']}") for page in dash.page_registry.values()],
+            [dbc.DropdownMenuItem(f" {page['name']}") pages_link],
             label="More pages",
             nav=True,
         ),
