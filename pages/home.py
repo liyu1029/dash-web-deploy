@@ -45,7 +45,7 @@ park_card = dbc.Card(
     [
         dbc.CardImg(src="assets/pic/bird.jpg", top=True),
         dbc.CardBody([
-            html.H3('資料來源'),
+            html.H3('資料來源')]+[
             dbc.ListGroup([
                 dbc.ListGroupItem(f" {park}")
             ]) for park in ["玉山", "雪霸", "陽明山", "太魯閣", "墾丁"]
